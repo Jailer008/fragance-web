@@ -1,0 +1,10 @@
+// Cloudflare Workers: publica el sitio estático generado por `npm run build` (carpeta out/).
+// El "name" debe coincidir con el nombre del proyecto en el panel de Cloudflare.
+{
+  "name": "fragance-web",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page"
+  }
+}
