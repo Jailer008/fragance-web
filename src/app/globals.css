@@ -1,0 +1,214 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
+
+  --color-crema: #f6f1e7;
+  --color-crema-2: #fbf8f2;
+  --color-arena: #e9e0cf;
+  --color-tinta: #141210;
+  --color-tinta-2: #57504a;
+  --color-noche: #0d0b0a;
+  --color-panel: #1a1714;
+  --color-panel-2: #24201c;
+  --color-vino: #8c1c2b;
+  --color-vino-2: #a8283a;
+  --color-oro: #c8a96a;
+  --color-oro-2: #e3cc97;
+  --color-wa: #25d366;
+
+  --animate-marquesina: marquesina 38s linear infinite;
+  --animate-brillo: brillo 3.2s ease-in-out infinite;
+}
+
+@keyframes marquesina {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes brillo {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes flotar {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(1deg);
+  }
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 130px;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-crema-2);
+    color: var(--color-tinta);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: var(--color-vino);
+    color: var(--color-crema);
+  }
+  button {
+    cursor: pointer;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-oro);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  .contenedor {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 16px;
+  }
+  @media (min-width: 768px) {
+    .contenedor {
+      padding-inline: 28px;
+    }
+  }
+
+  .titulo-seccion {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    font-size: clamp(1.75rem, 3.6vw, 2.6rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  .antetitulo {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-oro);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    min-height: 52px;
+    padding: 0 1.6rem;
+    border-radius: 2px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition:
+      background-color 0.25s,
+      color 0.25s,
+      border-color 0.25s,
+      transform 0.25s;
+  }
+  .btn:active {
+    transform: scale(0.98);
+  }
+  .btn-vino {
+    background: var(--color-vino);
+    color: var(--color-crema);
+  }
+  .btn-vino:hover {
+    background: var(--color-vino-2);
+  }
+  .btn-oro {
+    background: var(--color-oro);
+    color: var(--color-noche);
+  }
+  .btn-oro:hover {
+    background: var(--color-oro-2);
+  }
+  .btn-linea {
+    border: 1px solid currentColor;
+  }
+  .btn-linea:hover {
+    background: var(--color-crema);
+    color: var(--color-noche);
+    border-color: var(--color-crema);
+  }
+  .btn-wa {
+    background: var(--color-wa);
+    color: #fff;
+  }
+  .btn-wa:hover {
+    background: #1fb857;
+  }
+
+  /* Aparición suave al entrar en pantalla (lo activa useReveal). */
+  .revelar {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.9s cubic-bezier(0.2, 0.7, 0.2, 1),
+      transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .revelar.visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .frasco-flotante {
+    animation: flotar 7s ease-in-out infinite;
+  }
+
+  .aparecer {
+    animation: aparecer 0.45s ease both;
+  }
+
+  .sin-scrollbar {
+    scrollbar-width: none;
+  }
+  .sin-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .grano {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .revelar {
+    opacity: 1;
+    transform: none;
+  }
+}

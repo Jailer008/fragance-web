@@ -1,0 +1,62 @@
+{
+  "marca": "The Sons",
+  "lema": "Fragancias originales, elegidas con criterio",
+  "whatsapp": "573013630054",
+  "whatsappVisible": "+57 301 363 0054",
+  "mensajeGeneral": "Hola The Sons, quiero asesoría para elegir un perfume.",
+  "barraSuperior": [
+    "Perfumes 100% originales",
+    "Asesoría personalizada por WhatsApp",
+    "Envíos a toda Colombia"
+  ],
+  "barraEnvio": "Escríbenos y te ayudamos a elegir tu próxima fragancia",
+  "hero": {
+    "antetitulo": "Casa de fragancias",
+    "titulo": "Una fragancia que hable antes que tú",
+    "subtitulo": "Perfumes originales de diseñador, nicho y árabes. Elige, escríbenos por WhatsApp y nosotros nos encargamos del resto.",
+    "botonQuiz": "Encuentra tu fragancia",
+    "notaQuiz": "5 preguntas rápidas y te recomendamos tu perfume ideal",
+    "botonCatalogo": "Ver catálogo"
+  },
+  "garantias": [
+    { "icono": "sello", "titulo": "Originales", "texto": "Frascos sellados y auténticos" },
+    { "icono": "chat", "titulo": "Asesoría real", "texto": "Te atendemos por WhatsApp" },
+    { "icono": "envio", "titulo": "Envíos", "texto": "A toda Colombia" },
+    { "icono": "regalo", "titulo": "Listo para regalar", "texto": "Pídenos empaque especial" }
+  ],
+  "pasos": [
+    { "titulo": "Eliges tu perfume", "texto": "Desde el catálogo o con el test" },
+    { "titulo": "Nos escribes", "texto": "El botón arma el mensaje por ti" },
+    { "titulo": "Confirmamos tu pedido", "texto": "Precio, envío y forma de pago" },
+    { "titulo": "Lo recibes en casa", "texto": "Empacado con cuidado" }
+  ],
+  "valor": {
+    "titulo": "Somos The Sons",
+    "texto": "Creemos que un perfume es la firma que dejas en cada lugar. Por eso seleccionamos fragancias originales de las mejores casas —de diseñador, de nicho y árabes— y te acompañamos personalmente hasta encontrar la tuya."
+  },
+  "faq": [
+    {
+      "pregunta": "¿Los perfumes son originales?",
+      "respuesta": "Sí. Trabajamos únicamente con fragancias originales, en su frasco y empaque de fábrica."
+    },
+    {
+      "pregunta": "¿Cómo hago mi pedido?",
+      "respuesta": "Toca \"Pedir por WhatsApp\" en el perfume que te guste, o agrega varios a tu lista y envíala completa. Te respondemos para confirmar disponibilidad, envío y pago."
+    },
+    {
+      "pregunta": "¿Qué medios de pago aceptan?",
+      "respuesta": "Te contamos las opciones disponibles al confirmar tu pedido por WhatsApp."
+    },
+    {
+      "pregunta": "¿Hacen envíos a todo el país?",
+      "respuesta": "Sí, enviamos a toda Colombia. El costo y el tiempo de entrega dependen de tu ciudad; te lo confirmamos antes de despachar."
+    },
+    {
+      "pregunta": "¿Me pueden ayudar a elegir?",
+      "respuesta": "¡Claro! Cuéntanos qué aromas te gustan, para qué ocasión lo quieres y tu presupuesto, y te recomendamos opciones."
+    }
+  ],
+  "resenas": [],
+  "instagram": "",
+  "tiktok": ""
+}
